@@ -13,7 +13,7 @@ namespace BeatLeaderMapFilter.Utilities
         {
             if (Directory.Exists(BSPath.BeatLeaderMapFilterFolderPath)) return;
 
-            Directory.CreateDirectory(BSPath.GetNearRankModFolderPath);
+            Directory.CreateDirectory(BSPath.BeatLeaderMapFilterFolderPath);
         }
     }
 }

@@ -8,7 +8,7 @@
 		<vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-height='14'>
 			<string-setting text="Search" value="Search" />
 			<dropdown-list-setting text='Type' value="type-list-choice" choices='type-list-options' bind-value="true" apply-on-change="true" />
-			<dropdown-list-setting text='Category' value="category-list-choice" choices='category-list-options' bind-value="true" apply-on-change="true"/>
+			<dropdown-list-setting text='Category' value="Category-list-choice" choices='category-list-options' bind-value="true" apply-on-change="true"/>
 			
 			<bool-setting text='Stars' value='Stars' apply-on-change='true'></bool-setting>
 			<horizontal>

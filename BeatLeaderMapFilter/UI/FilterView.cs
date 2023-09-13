@@ -34,8 +34,6 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("type-list-options")]
         private List<object> typeListOptions = new object[] { "All maps", "Nominated", "Qualified", "Ranked" }.ToList();
 
-        // [UIValue("type-list-choice")]
-        // private string typelistChoice = "All maps";
         [UIValue("type-list-choice")]
         public string typelistChoice
         {
@@ -50,8 +48,6 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("category-list-options")]
         private List<object> categoryListOptions = new object[] { "None", "Acc", "Tech", "Midspeed", "Speed" }.ToList();
 
-        // [UIValue("category-list-choice")]
-        // private string categorylistChoice = "None";
         [UIValue("category-list-choice")]
         public string categorylistChoice
         {

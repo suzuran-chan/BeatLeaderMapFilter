@@ -32,11 +32,11 @@ namespace BeatLeaderMapFilter
 
             UI.Manager.Init();
 
-            if (!Configuration.PluginConfig.Instance.FolderMode)
-            {
-                Log.Info("BeatLeaderMapFilter initialized.");
-                return;
-            }
+            // if (!Configuration.PluginConfig.Instance.FolderMode)
+            // {
+            //     Log.Info("BeatLeaderMapFilter initialized.");
+            //     return;
+            // }
 
             try
             {
