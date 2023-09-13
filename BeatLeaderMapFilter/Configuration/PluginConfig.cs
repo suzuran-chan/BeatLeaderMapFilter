@@ -1,5 +1,4 @@
-﻿/*
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 using IPA.Config.Stores;
 
 [assembly: InternalsVisibleTo(GeneratedStore.AssemblyVisibilityTarget)]
@@ -33,6 +32,7 @@ namespace BeatLeaderMapFilter.Configuration
         {
             // このインスタンスのメンバーは他から移入されました
         }
+
+        public string FolderName { get; set; } = "BeatLeaderMapFilter";
     }
 }
-*/
