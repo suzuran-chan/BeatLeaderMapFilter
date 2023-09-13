@@ -1,6 +1,6 @@
 using IPALogger = IPA.Logging.Logger;
 
-namespace GetNearRankMod
+namespace BeatLeaderMapFilter
 {
     internal class Logger
     {

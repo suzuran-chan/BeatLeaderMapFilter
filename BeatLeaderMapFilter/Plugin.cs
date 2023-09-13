@@ -17,6 +17,7 @@ namespace BeatLeaderMapFilter
     public class Plugin
     {
         internal static Plugin Instance { get; private set; }
+        internal static IPALogger Log { get; private set; }
 
         [Init]
         /// <summary>
