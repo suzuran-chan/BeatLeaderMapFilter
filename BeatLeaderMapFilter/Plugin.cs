@@ -28,13 +28,13 @@ namespace BeatLeaderMapFilter
         public void Init(IPALogger logger, Config conf, Zenjector zenjector)
         {
             Instance = this;
-            Logger.log = logger;
+            Log = logger;
 
             UI.Manager.Init();
 
             if (!Configuration.PluginConfig.Instance.FolderMode)
             {
-                Logger.log.Info("BeatLeaderMapFilter initialized.");
+                Log.Info("BeatLeaderMapFilter initialized.");
                 return;
             }
 
@@ -45,10 +45,10 @@ namespace BeatLeaderMapFilter
             }
             catch (Exception ex)
             {
-                Logger.log.Error(ex.Message);
+                Log.Error(ex.Message);
             }
 
-            Logger.log.Info("BeatLeaderMapFilter initialized.");
+            Log.Info("BeatLeaderMapFilter initialized.");
 
             //BSIPAのConfigを使用する場合はコメントを外します
             //Configuration.PluginConfig.Instance = conf.Generated<Configuration.PluginConfig>();
