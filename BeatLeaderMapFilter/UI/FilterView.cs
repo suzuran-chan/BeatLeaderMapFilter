@@ -23,10 +23,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("Search")]
         public string Search
         {
-            get => PluginConfig.Instance.Search;
+            get => Configuration.PluginConfig.Instance.Search;
             set
             {
-                PluginConfig.Instance.Search = value;
+                Configuration.PluginConfig.Instance.Search = value;
                 NotifyPropertyChanged(nameof(Search));
             }
         }
@@ -39,10 +39,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("type-list-choice")]
         public string typelistChoice
         {
-            get => PluginConfig.Instance.Type;
+            get => Configuration.PluginConfig.Instance.Type;
             set
             {
-                PluginConfig.Instance.Type = value;
+                Configuration.PluginConfig.Instance.Type = value;
                 NotifyPropertyChanged(nameof(Type));
             }
         }
@@ -55,10 +55,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("category-list-choice")]
         public string categorylistChoice
         {
-            get => PluginConfig.Instance.Category;
+            get => Configuration.PluginConfig.Instance.Category;
             set
             {
-                PluginConfig.Instance.Category = value;
+                Configuration.PluginConfig.Instance.Category = value;
                 NotifyPropertyChanged(nameof(Category));
             }
         }
@@ -66,10 +66,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("Stars")]
         public bool Stars
         {
-            get => PluginConfig.Instance.Stars;
+            get => Configuration.PluginConfig.Instance.Stars;
             set
             {
-                PluginConfig.Instance.Stars = value;
+                Configuration.PluginConfig.Instance.Stars = value;
                 NotifyPropertyChanged(nameof(Stars));
             }
         }
@@ -77,10 +77,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("StarsFrom")]
         public float StarsFrom
         {
-            get => PluginConfig.Instance.StarsFrom;
+            get => Configuration.PluginConfig.Instance.StarsFrom;
             set
             {
-                PluginConfig.Instance.StarsFrom = value;
+                Configuration.PluginConfig.Instance.StarsFrom = value;
                 NotifyPropertyChanged(nameof(StarsFrom));
             }
         }
@@ -88,10 +88,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("StarsTo")]
         public float StarsTo
         {
-            get => PluginConfig.Instance.StarsTo;
+            get => Configuration.PluginConfig.Instance.StarsTo;
             set
             {
-                PluginConfig.Instance.StarsTo = value;
+                Configuration.PluginConfig.Instance.StarsTo = value;
                 NotifyPropertyChanged(nameof(StarsTo));
             }
         }
@@ -99,10 +99,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("AccRating")]
         public bool AccRating
         {
-            get => PluginConfig.Instance.AccRating;
+            get => Configuration.PluginConfig.Instance.AccRating;
             set
             {
-                PluginConfig.Instance.AccRating = value;
+                Configuration.PluginConfig.Instance.AccRating = value;
                 NotifyPropertyChanged(nameof(AccRating));
             }
         }
@@ -110,10 +110,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("AccRatingFrom")]
         public float AccRatingFrom
         {
-            get => PluginConfig.Instance.AccRatingFrom;
+            get => Configuration.PluginConfig.Instance.AccRatingFrom;
             set
             {
-                PluginConfig.Instance.AccRatingFrom = value;
+                Configuration.PluginConfig.Instance.AccRatingFrom = value;
                 NotifyPropertyChanged(nameof(AccRatingFrom));
             }
         }
@@ -121,10 +121,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("AccRatingTo")]
         public float AccRatingTo
         {
-            get => PluginConfig.Instance.AccRatingTo;
+            get => Configuration.PluginConfig.Instance.AccRatingTo;
             set
             {
-                PluginConfig.Instance.AccRatingTo = value;
+                Configuration.PluginConfig.Instance.AccRatingTo = value;
                 NotifyPropertyChanged(nameof(AccRatingTo));
             }
         }
@@ -132,10 +132,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("PassRating")]
         public bool PassRating
         {
-            get => PluginConfig.Instance.PassRating;
+            get => Configuration.PluginConfig.Instance.PassRating;
             set
             {
-                PluginConfig.Instance.PassRating = value;
+                Configuration.PluginConfig.Instance.PassRating = value;
                 NotifyPropertyChanged(nameof(PassRating));
             }
         }
@@ -143,10 +143,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("PassRatingFrom")]
         public float PassRatingFrom
         {
-            get => PluginConfig.Instance.PassRatingFrom;
+            get => Configuration.PluginConfig.Instance.PassRatingFrom;
             set
             {
-                PluginConfig.Instance.PassRatingFrom = value;
+                Configuration.PluginConfig.Instance.PassRatingFrom = value;
                 NotifyPropertyChanged(nameof(PassRatingFrom));
             }
         }
@@ -154,10 +154,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("PassRatingTo")]
         public float PassRatingTo
         {
-            get => PluginConfig.Instance.PassRatingTo;
+            get => Configuration.PluginConfig.Instance.PassRatingTo;
             set
             {
-                PluginConfig.Instance.PassRatingTo = value;
+                Configuration.PluginConfig.Instance.PassRatingTo = value;
                 NotifyPropertyChanged(nameof(PassRatingTo));
             }
         }
@@ -165,10 +165,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("TechRating")]
         public bool TechRating
         {
-            get => PluginConfig.Instance.TechRating;
+            get => Configuration.PluginConfig.Instance.TechRating;
             set
             {
-                PluginConfig.Instance.TechRating = value;
+                Configuration.PluginConfig.Instance.TechRating = value;
                 NotifyPropertyChanged(nameof(TechRating));
             }
         }
@@ -176,10 +176,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("TechRatingFrom")]
         public float TechRatingFrom
         {
-            get => PluginConfig.Instance.TechRatingFrom;
+            get => Configuration.PluginConfig.Instance.TechRatingFrom;
             set
             {
-                PluginConfig.Instance.TechRatingFrom = value;
+                Configuration.PluginConfig.Instance.TechRatingFrom = value;
                 NotifyPropertyChanged(nameof(TechRatingFrom));
             }
         }
@@ -187,10 +187,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("TechRatingTo")]
         public float TechRatingTo
         {
-            get => PluginConfig.Instance.TechRatingTo;
+            get => Configuration.PluginConfig.Instance.TechRatingTo;
             set
             {
-                PluginConfig.Instance.TechRatingTo = value;
+                Configuration.PluginConfig.Instance.TechRatingTo = value;
                 NotifyPropertyChanged(nameof(TechRatingTo));
             }
         }
@@ -198,10 +198,10 @@ namespace BeatLeaderMapFilter.UI
         [UIValue("MapsCount")]
         public int MapsCount
         {
-            get => PluginConfig.Instance.MapsCount;
+            get => Configuration.PluginConfig.Instance.MapsCount;
             set
             {
-                PluginConfig.Instance.MapsCount = value;
+                Configuration.PluginConfig.Instance.MapsCount = value;
                 NotifyPropertyChanged(nameof(MapsCount));
             }
         }
