@@ -1,5 +1,4 @@
 ﻿<vertical preferred-width="120" anchor-min-y="1" pad-top="-10" child-control-height="false">
-	<modal-keyboard id="searchKeyboard" move-to-center="true" value="searchValue" show-event="open-searchKeyboard" hide-event="close-searchKeyboard,closeAllModals" clear-on-open="false" on-enter="searchPressed" clickerino-offerino-closerino="false"></modal-keyboard>
 	<horizontal id='filterbarContainer' child-align='MiddleRight' child-control-width='false'>
 		<horizontal ignore-layout='true' pad-top='1'>
 			<text text='FILTERS' align='Center' font-size='7' italics='true'/>
@@ -7,32 +6,32 @@
 	</horizontal>
 	<settings-container size-delta-y='150'>
 		<vertical child-control-height='false' bg='panel-top' pad='2' pad-bottom='1' pad-top='1' preferred-height='14'>
-			<string-setting text="Search" />
+			<string-setting text="Search" value="Search" />
 			<dropdown-list-setting text='Type' value="type-list-choice" choices='type-list-options' bind-value="true" apply-on-change="true" />
 			<dropdown-list-setting text='Category' value="category-list-choice" choices='category-list-options' bind-value="true" apply-on-change="true"/>
-			<checkbox-setting text='Stars' hover-hint='MP platform remains levelled with all other players'></checkbox-setting>
-		
+			
+			<bool-setting text='Stars' value='Stars' apply-on-change='true'></bool-setting>
 			<horizontal>
-				<slider-setting text='' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
-				<slider-setting text='' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
+				<slider-setting text='' value='StarsFrom' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
+				<slider-setting text='' value='StarsTo' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
 			</horizontal>
-			<checkbox-setting text='Acc Rating' hover-hint='MP platform remains levelled with all other players'></checkbox-setting>
+			<bool-setting text='Acc Rating' value='AccRating' apply-on-change='true'></bool-setting>
 			<horizontal>
-				<slider-setting text='' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
-				<slider-setting text='' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
+				<slider-setting text='' value='AccRatingFrom' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
+				<slider-setting text='' bind-value="AccRatingTo" max='18' increment='0.1' preferred-width='6'/>
 			</horizontal>
-			<checkbox-setting text='Pass Rating' hover-hint='MP platform remains levelled with all other players'></checkbox-setting>
+			<bool-setting text='Pass Rating' value='PassRating' apply-on-change='true'></bool-setting>
 			<horizontal>
-				<slider-setting text='' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
-				<slider-setting text='' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
+				<slider-setting text='' value='PassRatingFrom' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
+				<slider-setting text='' value='PassRatingTo' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
 			</horizontal>
-			<checkbox-setting text='Tech Rating' hover-hint='MP platform remains levelled with all other players'></checkbox-setting>
+			<bool-setting text='Tech Rating' value='TechRating' apply-on-change='true'></bool-setting>
 			<horizontal>
-				<slider-setting text='' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
-				<slider-setting text='' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
+				<slider-setting text='' value='TechRatingFrom' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
+				<slider-setting text='' value='TechRatingTo' bind-value="true" max='18' increment='0.1' preferred-width='6'/>
 			</horizontal>
 			<horizontal>
-				<slider-setting text='Maps Count' bind-value="true" max='1000' increment='100' preferred-width='6'/>
+				<slider-setting text='Maps Count' value='MapsCount' bind-value="true" max='1000' increment='50' preferred-width='6'/>
 			</horizontal>	
 		
 			<horizontal>

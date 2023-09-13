@@ -29,10 +29,26 @@ namespace BeatLeaderMapFilter
         {
             Instance = this;
             Log = logger;
-            Log.Info("BeatLeaderMapFilter initialized.");
 
             UI.Manager.Init();
 
+            if (!PluginConfig.Instance.FolderMode)
+            {
+                Logger.log.Info("BeatLeaderMapFilter initialized.");
+                return;
+            }
+
+            try
+            {
+                FolderMaker folderMaker = new FolderMaker();
+                folderMaker.MakeBeatLeaderMapFilterFolder();
+            }
+            catch (Exception ex)
+            {
+                Logger.log.Error(ex.Message);
+            }
+
+            Logger.log.Info("BeatLeaderMapFilter initialized.");
 
             //BSIPAのConfigを使用する場合はコメントを外します
             //Configuration.PluginConfig.Instance = conf.Generated<Configuration.PluginConfig>();

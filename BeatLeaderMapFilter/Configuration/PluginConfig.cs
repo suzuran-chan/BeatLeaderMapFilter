@@ -33,6 +33,22 @@ namespace BeatLeaderMapFilter.Configuration
             // このインスタンスのメンバーは他から移入されました
         }
 
+        public string Search { get; set; } = string.Empty;
+        public string Type { get; set; } = "Ranked";
+        public string Category { get; set; } = "None";
+        public bool Stars { get; set; } = false;
+        public float StarsFrom { get; set; } = 0;
+        public float StarsTo { get; set; } = 0;
+        public bool AccRating { get; set; } = false;
+        public float AccRatingFrom { get; set; } = 0;
+        public float AccRatingTo { get; set; } = 0;
+        public bool PassRating { get; set; } = false;
+        public float PassRatingFrom { get; set; } = 0;
+        public float PassRatingTo { get; set; } = 0;
+        public bool TechRating { get; set; } = false;
+        public float TechRatingFrom { get; set; } = 0;
+        public float TechRatingTo { get; set; } = 0;
+        public int MapsCount { get; set; } = 100;
         public string FolderName { get; set; } = "BeatLeaderMapFilter";
     }
 }
