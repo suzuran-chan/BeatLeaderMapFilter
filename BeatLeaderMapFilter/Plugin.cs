@@ -17,7 +17,6 @@ namespace BeatLeaderMapFilter
     public class Plugin
     {
         internal static Plugin Instance { get; private set; }
-        internal static IPALogger Log { get; private set; }
 
         [Init]
         /// <summary>
@@ -28,11 +27,11 @@ namespace BeatLeaderMapFilter
         public void Init(IPALogger logger, Config conf, Zenjector zenjector)
         {
             Instance = this;
-            Log = logger;
+            Logger.log = logger;
 
             UI.Manager.Init();
 
-            if (!PluginConfig.Instance.FolderMode)
+            if (!Configuration.PluginConfig.Instance.FolderMode)
             {
                 Logger.log.Info("BeatLeaderMapFilter initialized.");
                 return;
