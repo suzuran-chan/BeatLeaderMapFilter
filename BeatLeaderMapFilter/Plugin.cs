@@ -10,6 +10,9 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using IPALogger = IPA.Logging.Logger;
+using BeatLeaderMapFilter.Utilities;
+using BeatLeaderMapFilter.Configuration;
+using System.Security.Cryptography;
 
 namespace BeatLeaderMapFilter
 {
@@ -29,14 +32,7 @@ namespace BeatLeaderMapFilter
         {
             Instance = this;
             Log = logger;
-
-            UI.Manager.Init();
-
-            // if (!Configuration.PluginConfig.Instance.FolderMode)
-            // {
-            //     Log.Info("BeatLeaderMapFilter initialized.");
-            //     return;
-            // }
+            PluginConfig.Instance = conf.Generated<PluginConfig>();
 
             try
             {
@@ -47,6 +43,8 @@ namespace BeatLeaderMapFilter
             {
                 Log.Error(ex.Message);
             }
+
+            UI.Manager.Init();
 
             Log.Info("BeatLeaderMapFilter initialized.");
 

@@ -10,7 +10,7 @@ namespace BeatLeaderMapFilter.UI
 {
     [HotReload(RelativePathToLayout = @"UI\BSML\SongList.bsml")]
     [ViewDefinition("BeatLeaderMapFilter.UI.BSML.SongList.bsml")]
-    class SongListController : BSMLAutomaticViewController
+    public class SongListController : BSMLAutomaticViewController
     {
     }
     

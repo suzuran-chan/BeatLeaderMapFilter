@@ -1,12 +1,44 @@
-﻿﻿<vertical preferred-width='120' anchor-pos-x="2" xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='- https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
-	<horizontal id='filterContainer' preferred-height='10' child-control-width='false' child-expand-width='false' pad-left='1'>
-		<button on-click='SelectRandom' text='Random' preferred-height='8'/>
-		<button event-click='ShowMoreModal' text='More🔽' preferred-height='8'/>
-		<vertical id='searchBoxContainer' preferred-width='44' pad-left='2'/>
-		<loading id="searchInProgress" preserve-aspect="true" ignore-layout='true' size-delta-x='6' anchor-min-x='0.33' anchor-max-x='0.33'/>
-
-		<vertical preferred-width='44' pad-left='1'>
-			<dropdown-list-setting id='sortDropdown' text='Sort' value="selectedSortMode" apply-on-change="true" choices='sortModeSelections' on-change='UpdateDataAndFilters'/>
-		</vertical>
-	</horizontal>
+﻿<vertical preferred-width="120" anchor-min-y="1" child-control-height="false">
+	<horizontal id='filterbarContainer' bg='panel-top' child-align='MiddleRight'>
+		
+		<scroll-view spacing='0' pref-height='55'>
+			<horizontal min-width='90'>
+				<text text='Line1' font-size='4' align='Left'/>
+			</horizontal>
+			<horizontal min-width='90'>
+				<text text='Line2' font-size='4' align='Left'/>
+			</horizontal>
+			<horizontal min-width='90'>
+				<text text='Line3' font-size='4' align='Left'/>
+			</horizontal>
+			<horizontal min-width='90'>
+				<text text='Line4' font-size='4' align='Left'/>
+			</horizontal>
+			<horizontal min-width='90'>
+				<text text='Line5' font-size='6' align='Left'/>
+			</horizontal>
+			<horizontal min-width='90'>
+				<text text='Line5' font-size='6' align='Left'/>
+			</horizontal>
+			<horizontal min-width='90'>
+				<text text='Line5' font-size='6' align='Left'/>
+			</horizontal>
+			<horizontal min-width='90'>
+				<text text='Line5' font-size='6' align='Left'/>
+			</horizontal>
+			<horizontal min-width='90'>
+				<text text='Line5' font-size='6' align='Left'/>
+			</horizontal>
+			<horizontal min-width='90'>
+				<text text='Line5' font-size='6' align='Left'/>
+			</horizontal>
+			<horizontal min-width='90'>
+				<text text='Line5' font-size='6' align='Left'/>
+			</horizontal>
+			<horizontal min-width='90'>
+				<text text='Line5' font-size='6' align='Left'/>
+			</horizontal>
+		</scroll-view>
+	</horizontal>	
 </vertical>
+	

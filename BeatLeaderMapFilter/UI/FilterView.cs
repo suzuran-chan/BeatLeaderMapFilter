@@ -18,24 +18,42 @@ namespace BeatLeaderMapFilter.UI
 {
     [HotReload(RelativePathToLayout = @"UI\BSML\FilterView.bsml")]
     [ViewDefinition("BeatLeaderMapFilter.UI.BSML.FilterView.bsml")]
-    class FilterView : BSMLAutomaticViewController, INotifyPropertyChanged
+    public class FilterView : BSMLAutomaticViewController, INotifyPropertyChanged
     {
+        public static FilterView Instance { get; private set; } = new FilterView();
+
+
+        public void SyncWithPluginConfig(string propetyName)
+        {
+            System.Reflection.PropertyInfo[] thisPropetyInfo = typeof(FilterView).GetProperties();
+            foreach (var propertyInfo in thisPropetyInfo)
+            {
+                if (propertyInfo.Name != propetyName) continue;
+
+                NotifyPropertyChanged(propetyName);
+                break;
+            }
+        }
+
         [UIValue("Search")]
         public string Search
         {
             get => Configuration.PluginConfig.Instance.Search;
             set
             {
+                //Console.WriteLine($"Setting Search property to: {value}");
                 Configuration.PluginConfig.Instance.Search = value;
+                Console.WriteLine("setテスト");
+               Console.WriteLine(Configuration.PluginConfig.Instance.Search);
                 NotifyPropertyChanged(nameof(Search));
             }
         }
 
-        [UIValue("type-list-options")]
-        private List<object> typeListOptions = new object[] { "All maps", "Nominated", "Qualified", "Ranked" }.ToList();
+        [UIValue("TypeList")]
+        private List<object> TypeList = new object[] { "All maps", "Nominated", "Qualified", "Ranked" }.ToList();
 
-        [UIValue("type-list-choice")]
-        public string typelistChoice
+        [UIValue("Type")]
+        public string Type
         {
             get => Configuration.PluginConfig.Instance.Type;
             set
@@ -45,11 +63,11 @@ namespace BeatLeaderMapFilter.UI
             }
         }
 
-        [UIValue("category-list-options")]
-        private List<object> categoryListOptions = new object[] { "None", "Acc", "Tech", "Midspeed", "Speed" }.ToList();
+        [UIValue("CategoryList")]
+        private List<object> CategoryList = new object[] { "None", "Acc", "Tech", "Midspeed", "Speed" }.ToList();
 
-        [UIValue("category-list-choice")]
-        public string categorylistChoice
+        [UIValue("Category")]
+        public string Category
         {
             get => Configuration.PluginConfig.Instance.Category;
             set
@@ -76,11 +94,13 @@ namespace BeatLeaderMapFilter.UI
             get => Configuration.PluginConfig.Instance.StarsFrom;
             set
             {
+                Console.WriteLine("setテスト");
+                Console.WriteLine(Configuration.PluginConfig.Instance.StarsFrom);
                 Configuration.PluginConfig.Instance.StarsFrom = value;
                 NotifyPropertyChanged(nameof(StarsFrom));
             }
         }
-        
+
         [UIValue("StarsTo")]
         public float StarsTo
         {
@@ -179,7 +199,7 @@ namespace BeatLeaderMapFilter.UI
                 NotifyPropertyChanged(nameof(TechRatingFrom));
             }
         }
-        
+
         [UIValue("TechRatingTo")]
         public float TechRatingTo
         {
