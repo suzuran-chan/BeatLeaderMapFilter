@@ -43,12 +43,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BSML, Version=1.6.9.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="SiraUtil">
       <HintPath>$(BeatSaberDir)\Plugins\SiraUtil.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="SongCore, Version=3.10.1.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Dynamic" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -107,6 +110,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logger.cs" />
     <Compile Include="Installers\BeatLeaderMapFilterAppInstaller.cs" />
     <Compile Include="Installers\BeatLeaderMapFilterMenuInstaller.cs" />
     <Compile Include="Installers\BeatLeaderMapFilterPlayerInstaller.cs" />
@@ -114,10 +118,14 @@
     <Compile Include="Plugin.cs" />
     <Compile Include="Configuration\PluginConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structure\MapData.cs" />
     <Compile Include="UI\BLMFFlowCoordinator.cs" />
     <Compile Include="UI\SongListController.cs" />
     <Compile Include="UI\FilterView.cs" />
     <Compile Include="UI\Manager.cs" />
+    <Compile Include="Utilities\BeatLeaderMapsDataGetter.cs" />
+    <Compile Include="Utilities\APIEndpointGetter.cs" />
+    <Compile Include="Utilities\FileNameGetter.cs" />
     <Compile Include="Utilities\PlayListMaker.cs" />
     <Compile Include="Utilities\FolderMaker.cs" />
   </ItemGroup>
@@ -140,6 +148,8 @@
       <Version>13.0.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+	 <EmbeddedResource Include=".\Resources\BeatLeaderMapFilterImage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

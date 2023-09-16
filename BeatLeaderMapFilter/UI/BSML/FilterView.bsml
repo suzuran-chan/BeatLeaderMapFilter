@@ -34,7 +34,7 @@
 	</scroll-view>
 
 	<horizontal>
-		<button id='' pref-height='8' pref-width='25' text='Reset' on-click='searchOpened' click-event='open-searchKeyboard' ></button>
-		<button id='' pref-height='8' pref-width='25' text='⏬Playlist' on-click='searchOpened' click-event='open-searchKeyboard' ></button>
+		<button id='' pref-height='8' pref-width='25' text='Reset' on-click='' click-event='open-searchKeyboard' ></button>
+		<button id='' pref-height='8' pref-width='25' text='⏬Playlist' on-click='playlistGenerate' click-event='open-searchKeyboard' ></button>
 	</horizontal>
 </vertical>

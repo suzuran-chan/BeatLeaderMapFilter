@@ -20,7 +20,6 @@ namespace BeatLeaderMapFilter
     public class Plugin
     {
         internal static Plugin Instance { get; private set; }
-        internal static IPALogger Log { get; private set; }
 
         [Init]
         /// <summary>
@@ -31,7 +30,7 @@ namespace BeatLeaderMapFilter
         public void Init(IPALogger logger, Config conf, Zenjector zenjector)
         {
             Instance = this;
-            Log = logger;
+            Logger.log = logger;
             PluginConfig.Instance = conf.Generated<PluginConfig>();
 
             try
@@ -41,12 +40,12 @@ namespace BeatLeaderMapFilter
             }
             catch (Exception ex)
             {
-                Log.Error(ex.Message);
+                Logger.log.Error(ex.Message);
             }
 
             UI.Manager.Init();
 
-            Log.Info("BeatLeaderMapFilter initialized.");
+            Logger.log.Info("BeatLeaderMapFilter initialized.");
 
             //BSIPAのConfigを使用する場合はコメントを外します
             //Configuration.PluginConfig.Instance = conf.Generated<Configuration.PluginConfig>();
@@ -61,14 +60,14 @@ namespace BeatLeaderMapFilter
         [OnStart]
         public void OnApplicationStart()
         {
-            Log.Debug("OnApplicationStart");
+            Logger.log.Debug("OnApplicationStart");
 
         }
 
         [OnExit]
         public void OnApplicationQuit()
         {
-            Log.Debug("OnApplicationQuit");
+            Logger.log.Debug("OnApplicationQuit");
 
         }
     }

@@ -1,4 +1,5 @@
-﻿using BeatSaberMarkupLanguage;
+﻿using BeatLeaderMapFilter.Utilities;
+using BeatSaberMarkupLanguage;
 using BeatSaberMarkupLanguage.Attributes;
 using BeatSaberMarkupLanguage.Components;
 using BeatSaberMarkupLanguage.ViewControllers;
@@ -220,6 +221,15 @@ namespace BeatLeaderMapFilter.UI
                 Configuration.PluginConfig.Instance.MapsCount = value;
                 NotifyPropertyChanged(nameof(MapsCount));
             }
+        }
+
+        [UIAction("playlistGenerate")]
+        private void playlistButtonClicked()
+        {
+            Console.WriteLine("Playlist Button was clicked!");
+            PlaylistMaker playlistMaker = new PlaylistMaker();
+            playlistMaker.MakePlaylist();
+            SongCore.Loader.Instance.RefreshSongs(false);
         }
     }
 
