@@ -34,22 +34,22 @@ namespace BeatLeaderMapFilter.Utilities
                 {
                     playlistName = playlistName + "-C" + PluginConfig.Instance.Category;
                 }
-                //stars以下はテストする
+
                 if (PluginConfig.Instance.Stars == true)
                 {
-
+                    playlistName = playlistName + "-SF" + PluginConfig.Instance.StarsFrom + "-ST" + PluginConfig.Instance.StarsTo;
                 }
                 if (PluginConfig.Instance.AccRating == true)
                 {
-
+                    playlistName = playlistName + "-ARF" + PluginConfig.Instance.AccRatingFrom + "-ART" + PluginConfig.Instance.AccRatingTo;
                 }
                 if (PluginConfig.Instance.PassRating == true)
                 {
-
+                    playlistName = playlistName + "-PRF" + PluginConfig.Instance.PassRatingFrom + "-ART" + PluginConfig.Instance.PassRatingTo;
                 }
                 if (PluginConfig.Instance.TechRating == true)
                 {
-
+                    playlistName = playlistName + "-TRF" + PluginConfig.Instance.TechRatingFrom + "-TRT" + PluginConfig.Instance.TechRatingTo;
                 }
             }
             playlistName = playlistName + "-MC" + PluginConfig.Instance.MapsCount;

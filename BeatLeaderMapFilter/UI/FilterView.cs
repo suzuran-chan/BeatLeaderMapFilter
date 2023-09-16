@@ -1,18 +1,10 @@
 ﻿using BeatLeaderMapFilter.Utilities;
-using BeatSaberMarkupLanguage;
 using BeatSaberMarkupLanguage.Attributes;
-using BeatSaberMarkupLanguage.Components;
 using BeatSaberMarkupLanguage.ViewControllers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using BeatSaberMarkupLanguage.Parser;
-using HMUI;
-using IPA.Utilities;
-using UnityEngine;
-using Zenject;
-using UnityEngine.UI;
 using System.Threading.Tasks;
 
 namespace BeatLeaderMapFilter.UI
@@ -44,8 +36,9 @@ namespace BeatLeaderMapFilter.UI
             {
                 //Console.WriteLine($"Setting Search property to: {value}");
                 Configuration.PluginConfig.Instance.Search = value;
-                Console.WriteLine("setテスト");
-               Console.WriteLine(Configuration.PluginConfig.Instance.Search);
+                Console.WriteLine("valuetest");
+                Console.WriteLine("value");
+                Console.WriteLine(Configuration.PluginConfig.Instance.Search);
                 NotifyPropertyChanged(nameof(Search));
             }
         }
@@ -223,12 +216,49 @@ namespace BeatLeaderMapFilter.UI
             }
         }
 
-        [UIAction("playlistGenerate")]
-        private void playlistButtonClicked()
+        [UIAction("filterReset")]
+        private void filterResetButtonClickedAsync()
         {
-            Console.WriteLine("Playlist Button was clicked!");
+            Configuration.PluginConfig.Instance.Search = string.Empty;
+            NotifyPropertyChanged(nameof(Search));
+            Configuration.PluginConfig.Instance.Type = "Ranked";
+            NotifyPropertyChanged(nameof(Type));
+            Configuration.PluginConfig.Instance.Category = "None";
+            NotifyPropertyChanged(nameof(Category));
+            Configuration.PluginConfig.Instance.Stars = false;
+            NotifyPropertyChanged(nameof(Stars));
+            Console.WriteLine(Configuration.PluginConfig.Instance.Stars);
+            Configuration.PluginConfig.Instance.StarsFrom = 0.00f; ;
+            NotifyPropertyChanged(nameof(StarsFrom));
+            Configuration.PluginConfig.Instance.StarsTo = 0.00f; ;
+            NotifyPropertyChanged(nameof(StarsTo));
+            Configuration.PluginConfig.Instance.AccRating = false;
+            NotifyPropertyChanged(nameof(AccRating));
+            Configuration.PluginConfig.Instance.AccRatingFrom = 0.00f; ;
+            NotifyPropertyChanged(nameof(AccRatingFrom));
+            Configuration.PluginConfig.Instance.AccRatingTo = 0.00f; ;
+            NotifyPropertyChanged(nameof(AccRatingTo));
+            Configuration.PluginConfig.Instance.PassRating = false;
+            NotifyPropertyChanged(nameof(PassRating));
+            Configuration.PluginConfig.Instance.PassRatingFrom = 0.00f; ;
+            NotifyPropertyChanged(nameof(PassRatingFrom));
+            Configuration.PluginConfig.Instance.PassRatingTo = 0.00f; ;
+            NotifyPropertyChanged(nameof(PassRatingTo));
+            Configuration.PluginConfig.Instance.TechRating = false;
+            NotifyPropertyChanged(nameof(TechRating));
+            Configuration.PluginConfig.Instance.TechRatingFrom = 0.00f; ;
+            NotifyPropertyChanged(nameof(TechRatingFrom));
+            Configuration.PluginConfig.Instance.TechRatingTo = 0.00f; ;
+            NotifyPropertyChanged(nameof(TechRatingTo));
+            Configuration.PluginConfig.Instance.MapsCount = 100;
+            NotifyPropertyChanged(nameof(MapsCount));
+        }
+
+        [UIAction("playlistGenerate")]
+        private async Task playlistButtonClickedAsync()
+        {
             PlaylistMaker playlistMaker = new PlaylistMaker();
-            playlistMaker.MakePlaylist();
+            await playlistMaker.MakePlaylist();
             SongCore.Loader.Instance.RefreshSongs(false);
         }
     }

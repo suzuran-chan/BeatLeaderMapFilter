@@ -1,8 +1,5 @@
 ﻿using BeatSaberMarkupLanguage;
 using HMUI;
-using Zenject;
-using System;
-using ModestTree;
 
 namespace BeatLeaderMapFilter.UI
 {
@@ -35,8 +32,8 @@ namespace BeatLeaderMapFilter.UI
 
             showBackButton = true;
 
-            ProvideInitialViewControllers(_songlist, _filterView);
-
+            ProvideInitialViewControllers(_filterView);
+            //ProvideInitialViewControllers(_songlist, _filterView);
         }
 
         protected override void BackButtonWasPressed(ViewController topViewController)

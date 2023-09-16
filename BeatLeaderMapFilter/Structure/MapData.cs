@@ -20,22 +20,5 @@
         internal string MapHash => _mapHash;
         internal string Difficulty => _difficulty;
         internal string Characteristic => _characteristic;
-
-        //public override int GetHashCode()
-        //{
-        //    return SongName.GetHashCode() ^
-        //            MapHash.GetHashCode() ^
-        //            Difficulty.GetHashCode();
-        //}
-
-        //public override bool Equals(object obj)
-        //{
-        //    MapData other = obj as MapData;
-        //    if (other == null) return false;
-
-        //    return this.SongName == other.SongName &&
-        //            this.MapHash == other.MapHash &&
-        //            this.Difficulty == other.Difficulty;
-        //}
     }
 }

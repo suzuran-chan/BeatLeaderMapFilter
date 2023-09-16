@@ -1,4 +1,5 @@
-﻿<vertical preferred-width="120" anchor-min-y="1" child-control-height="false">
+﻿<!--
+<vertical preferred-width="120" anchor-min-y="1" child-control-height="false">
 	<horizontal id='filterbarContainer' bg='panel-top' child-align='MiddleRight'>
 		
 		<scroll-view spacing='0' pref-height='55'>
@@ -41,4 +42,5 @@
 		</scroll-view>
 	</horizontal>	
 </vertical>
+-->
 	
