@@ -8,28 +8,28 @@
 		<dropdown-list-setting text='Type' value='Type' choices='TypeList' bind-value='true' apply-on-change='true' />
 		<dropdown-list-setting text='Category' value='Category' choices='CategoryList' bind-value='true' apply-on-change='true' />
 
-		<bool-setting text='Stars' value='Stars' bind-value='true' apply-on-change='true'></bool-setting>
+		<bool-setting text='Stars' value='Stars' bind-value='true' apply-on-change='true' interactable='~TypeChange'></bool-setting>
 		<horizontal>
-			<slider-setting text='' value='StarsFrom' bind-value='true' max='18' increment='0.1' apply-on-change='true' preferred-width='6' />
-			<slider-setting text='' value='StarsTo' bind-value='true' max='18' increment='0.1' apply-on-change='true' preferred-width='6' />
+			<slider-setting text='' value='StarsFrom' bind-value='true' max='18' increment='0.1' apply-on-change='true' interactable='~TypeChange' preferred-width='6' />
+			<slider-setting text='' value='StarsTo' bind-value='true' max='18' increment='0.1' apply-on-change='true' interactable='~TypeChange' preferred-width='6' />
 		</horizontal>
-		<bool-setting text='Acc Rating' value='AccRating' bind-value='true' apply-on-change='true'></bool-setting>
+		<bool-setting text='Acc Rating' value='AccRating' bind-value='true' apply-on-change='true' interactable='~TypeChange'></bool-setting>
 		<horizontal>
-			<slider-setting text='' value='AccRatingFrom' bind-value='true' max='18' increment='0.1' apply-on-change='true' preferred-width='6' />
-			<slider-setting text='' value='AccRatingTo' bind-value='true' max='18' increment='0.1' apply-on-change='true' preferred-width='6' />
+			<slider-setting text='' value='AccRatingFrom' bind-value='true' max='18' increment='0.1' apply-on-change='true' interactable='~TypeChange' preferred-width='6' />
+			<slider-setting text='' value='AccRatingTo' bind-value='true' max='18' increment='0.1' apply-on-change='true' interactable='~TypeChange' preferred-width='6' />
 		</horizontal>
-		<bool-setting text='Pass Rating' value='PassRating' bind-value='true' apply-on-change='true'></bool-setting>
+		<bool-setting text='Pass Rating' value='PassRating' bind-value='true' apply-on-change='true' interactable='~TypeChange'></bool-setting>
 		<horizontal>
-			<slider-setting text='' value='PassRatingFrom' bind-value='true' max='18' increment='0.1' apply-on-change='true' preferred-width='6' />
-			<slider-setting text='' value='PassRatingTo' bind-value='true' max='18' increment='0.1' apply-on-change='true' preferred-width='6' />
+			<slider-setting text='' value='PassRatingFrom' bind-value='true' max='18' increment='0.1' apply-on-change='true' interactable='~TypeChange' preferred-width='6' />
+			<slider-setting text='' value='PassRatingTo' bind-value='true' max='18' increment='0.1' apply-on-change='true' interactable='~TypeChange' preferred-width='6' />
 		</horizontal>
-		<bool-setting text='Tech Rating' value='TechRating' bind-value='true' apply-on-change='true'></bool-setting>
+		<bool-setting text='Tech Rating' value='TechRating' bind-value='true' apply-on-change='true' interactable='~TypeChange'></bool-setting>
 		<horizontal>
-			<slider-setting text='' value='TechRatingFrom' bind-value='true' max='18' increment='0.1' apply-on-change='true' preferred-width='6' />
-			<slider-setting text='' value='TechRatingTo' bind-value='true' max='18' increment='0.1' apply-on-change='true' preferred-width='6' />
+			<slider-setting text='' value='TechRatingFrom' bind-value='true' max='18' increment='0.1' apply-on-change='true' interactable='~TypeChange' preferred-width='6' />
+			<slider-setting text='' value='TechRatingTo' bind-value='true' max='18' increment='0.1' apply-on-change='true' interactable='~TypeChange' preferred-width='6' />
 		</horizontal>
 		<horizontal>
-			<slider-setting text='Maps Count' value='MapsCount' bind-value='true' max='1000' increment='50' integer-only='true' apply-on-change='true' preferred-width='6' />
+			<slider-setting text='Maps Count' value='MapsCount' bind-value='true' max='1000' increment='10' integer-only='true' apply-on-change='true' preferred-width='6' />
 		</horizontal>
 	</scroll-view>
 

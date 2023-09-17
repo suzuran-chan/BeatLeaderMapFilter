@@ -74,6 +74,7 @@ namespace BeatLeaderMapFilter.Configuration
 
         public string Search { get; set; } = string.Empty;
         public string Type { get; set; } = "Ranked";
+        public bool TypeChange { get; set; } = false;
         public string Category { get; set; } = "None";
         public bool Stars { get; set; } = false;
         public float StarsFrom { get; set; } = 0.00f;

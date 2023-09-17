@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace BeatLeaderMapFilter.UI
 {
@@ -34,11 +35,7 @@ namespace BeatLeaderMapFilter.UI
             get => Configuration.PluginConfig.Instance.Search;
             set
             {
-                //Console.WriteLine($"Setting Search property to: {value}");
                 Configuration.PluginConfig.Instance.Search = value;
-                Console.WriteLine("valuetest");
-                Console.WriteLine("value");
-                Console.WriteLine(Configuration.PluginConfig.Instance.Search);
                 NotifyPropertyChanged(nameof(Search));
             }
         }
@@ -54,6 +51,16 @@ namespace BeatLeaderMapFilter.UI
             {
                 Configuration.PluginConfig.Instance.Type = value;
                 NotifyPropertyChanged(nameof(Type));
+                if (Configuration.PluginConfig.Instance.Type == "All maps")
+                {
+                    Configuration.PluginConfig.Instance.TypeChange = false;
+                    NotifyPropertyChanged(nameof(TypeChange));
+                } 
+                else
+                {
+                    Configuration.PluginConfig.Instance.TypeChange = true;
+                    NotifyPropertyChanged(nameof(TypeChange));
+                }
             }
         }
 
@@ -88,8 +95,6 @@ namespace BeatLeaderMapFilter.UI
             get => Configuration.PluginConfig.Instance.StarsFrom;
             set
             {
-                Console.WriteLine("setテスト");
-                Console.WriteLine(Configuration.PluginConfig.Instance.StarsFrom);
                 Configuration.PluginConfig.Instance.StarsFrom = value;
                 NotifyPropertyChanged(nameof(StarsFrom));
             }
@@ -214,6 +219,12 @@ namespace BeatLeaderMapFilter.UI
                 Configuration.PluginConfig.Instance.MapsCount = value;
                 NotifyPropertyChanged(nameof(MapsCount));
             }
+        }
+
+        [UIValue("TypeChange")]
+        public bool TypeChange
+        {
+            get => Configuration.PluginConfig.Instance.TypeChange;
         }
 
         [UIAction("filterReset")]

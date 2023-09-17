@@ -96,50 +96,6 @@ namespace BeatLeaderMapFilter.Utilities
             wr.Close();
         }
 
-        private static string SetCaracteristic(string characteristic, MapData mapData)
-        {
-            if (mapData.Difficulty.Contains("Standard"))
-            {
-                characteristic = "Standard";
-            }
-            else if (mapData.Difficulty.Contains("NoArrow"))
-            {
-                characteristic = "NoArrow";
-            }
-            else if (mapData.Difficulty.Contains("SingleSaber"))
-            {
-                characteristic = "SingleSaber";
-            }
-
-            return characteristic;
-        }
-
-        private static string SetDifficulty(string name, MapData mapData)
-        {
-            if (mapData.Difficulty.Contains("ExpertPlus"))
-            {
-                name = "expertPlus";
-            }
-            else if (mapData.Difficulty.Contains("Expert"))
-            {
-                name = "expert";
-            }
-            else if (mapData.Difficulty.Contains("Hard"))
-            {
-                name = "hard";
-            }
-            else if (mapData.Difficulty.Contains("Normal"))
-            {
-                name = "normal";
-            }
-            else if (mapData.Difficulty.Contains("Easy"))
-            {
-                name = "easy";
-            }
-
-            return name;
-        }
-
         public string GetCoverImage()
         {
             try
