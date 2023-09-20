@@ -9,7 +9,7 @@
   "dependsOn": {
     "BSIPA": "^4.2.2",
     "SiraUtil": "^3.1.2",
-    "BSML": "^1.6.9",
+    "BeatSaberMarkupLanguage": "^1.6.9",
     "SongCore": "^3.10.1"
   }
 }
